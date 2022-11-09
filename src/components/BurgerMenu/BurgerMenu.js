@@ -41,19 +41,31 @@ const BurgerMenu = ({ show, collapseBurgerMenu }) => {
         </div>
       </div>
       <div className="divider"></div>
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <Link
+        onClick={() => collapseBurgerMenu()}
+        to="/"
+        style={{ textDecoration: "none" }}
+      >
         <Typography component="p" variant="h7" color="white">
           خانه
         </Typography>
       </Link>
       <div className="divider"></div>
-      <Link to="/allmovies" style={{ textDecoration: "none" }}>
+      <Link
+        onClick={() => collapseBurgerMenu()}
+        to="/allmovies"
+        style={{ textDecoration: "none" }}
+      >
         <Typography component="p" variant="h7" color="white">
           فیلم ها
         </Typography>
       </Link>
       <div className="divider"></div>
-      <Link to="/allseries" style={{ textDecoration: "none" }}>
+      <Link
+        onClick={() => collapseBurgerMenu()}
+        to="/allseries"
+        style={{ textDecoration: "none" }}
+      >
         <Typography component="p" variant="h7" color="white">
           سریال ها
         </Typography>
