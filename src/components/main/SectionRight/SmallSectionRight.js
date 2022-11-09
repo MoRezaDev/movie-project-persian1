@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { styled, Box, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 
@@ -60,6 +61,8 @@ const StyledContentOuter = styled(Box)({
 const SmallSectionRight = ({ postData }) => {
   const { size } = useContext(sizeContext);
   const {
+    type,
+    slug,
     coverPhoto: { url },
     title,
   } = postData;
@@ -119,7 +122,9 @@ const SmallSectionRight = ({ postData }) => {
           </Typography>
         </StyledContentOuter>
       </StyledContentBox>
-      <StyledButton variant="contained">ادامه / دانلود</StyledButton>
+      <Link to={`${type}/${slug}`}>
+        <StyledButton variant="contained">ادامه / دانلود</StyledButton>
+      </Link>
     </StyledBox>
   );
 };
